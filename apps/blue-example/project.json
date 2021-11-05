@@ -1,0 +1,72 @@
+{
+  "root": "apps/blue-example",
+  "sourceRoot": "apps/blue-example/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/blue-example",
+        "index": "apps/blue-example/src/index.html",
+        "baseHref": "/",
+        "main": "apps/blue-example/src/main.tsx",
+        "polyfills": "apps/blue-example/src/polyfills.ts",
+        "tsConfig": "apps/blue-example/tsconfig.app.json",
+        "assets": [
+          "apps/blue-example/src/favicon.ico",
+          "apps/blue-example/src/assets"
+        ],
+        "styles": ["apps/blue-example/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/blue-example/src/environments/environment.ts",
+              "with": "apps/blue-example/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "blue-example:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "blue-example:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/blue-example/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/blue-example"],
+      "options": {
+        "jestConfig": "apps/blue-example/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

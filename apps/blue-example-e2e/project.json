@@ -1,0 +1,29 @@
+{
+  "root": "apps/blue-example-e2e",
+  "sourceRoot": "apps/blue-example-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/blue-example-e2e/cypress.json",
+        "devServerTarget": "blue-example:serve",
+        "tsConfig": "apps/blue-example-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "blue-example:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/blue-example-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["blue-example"]
+}
