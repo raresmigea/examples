@@ -6,6 +6,7 @@
     "header": "libs/header",
     "header-e2e": "apps/header-e2e",
     "red-example": "apps/red-example",
-    "red-example-e2e": "apps/red-example-e2e"
+    "red-example-e2e": "apps/red-example-e2e",
+    "util-formatters": "libs/util-formatters"
   }
 }

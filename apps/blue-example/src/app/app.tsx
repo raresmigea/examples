@@ -3,8 +3,10 @@ import styles from './app.module.scss';
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 import { Header } from '@examples/header'
+import { formatRating } from '@examples/util-formatters';
 
 export function App() {
+  const value = 123.2343242;
   return (
     <div className={styles.app}>
       <Header />
@@ -12,6 +14,7 @@ export function App() {
         <Logo width="75" height="75" />
         <h1>Welcome to blue-example!</h1>
       </header>
+      <div>{formatRating(value)}</div>
       <main>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>

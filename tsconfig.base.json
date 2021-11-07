@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@examples/header": ["libs/header/src/index.ts"]
+      "@examples/header": ["libs/header/src/index.ts"],
+      "@examples/util-formatters": ["libs/util-formatters/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
