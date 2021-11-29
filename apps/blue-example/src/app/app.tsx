@@ -12,7 +12,7 @@ export function App() {
       <Header />
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to blue-example!</h1>
+        <h1>Welcome to blue-example.</h1>
       </header>
       <div>{formatRating(value)}</div>
       <main>
