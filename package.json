@@ -60,7 +60,7 @@
     "sass": "^1.47.0",
     "ts-jest": "^27.1.2",
     "typescript": "~4.3.5",
-    "url-loader": "^3.0.0"
+    "url-loader": "^4.1.1"
   },
   "description": "This project was generated using [Nx](https://nx.dev).",
   "main": "jest.config.js",
