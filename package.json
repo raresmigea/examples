@@ -9,7 +9,7 @@
   },
   "private": true,
   "dependencies": {
-    "@nrwl/next": "^13.7.2",
+    "@nrwl/next": "^13.8.8",
     "core-js": "^3.21.1",
     "loader": "^2.1.1",
     "next": "^12.1.0",
